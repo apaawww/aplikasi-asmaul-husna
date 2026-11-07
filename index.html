@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Asmaul Husna - 99 Nama Allah</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand">
+                <span class="brand-icon">✦</span>
+                <span>Asmaul Husna</span>
+                <span class="brand-icon">✦</span>
+            </a>
+
+            <span class="nav-label">99 Nama Allah SWT</span>
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+
+            <p class="hero-subtitle">
+                MENGENAL NAMA-NAMA ALLAH SWT
+            </p>
+
+            <h1>Asmaul Husna</h1>
+
+            <p class="hero-arabic">
+                أَسْمَاءُ اللَّهِ الْحُسْنَى
+            </p>
+
+            <p class="hero-description">
+                Kenali dan pelajari 99 nama Allah yang indah
+                beserta tulisan Arab, transliterasi, dan artinya.
+            </p>
+
+            <div class="total-box">
+                <span id="totalData">99</span>
+                <p>Nama Allah</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- DAFTAR ASMAUL HUSNA -->
+    <main class="main-container">
+
+        <section class="content-section">
+
+            <div class="section-heading">
+                <span class="section-tag">EXPLORE</span>
+
+                <h2>Daftar Asmaul Husna</h2>
+
+                <p>
+                    Temukan dan pelajari setiap nama Allah
+                    melalui daftar berikut.
+                </p>
+            </div>
+
+
+            <!-- PENCARIAN DAN BAHASA -->
+            <div class="toolbar">
+
+                <div class="search-box">
+
+                    <span class="search-icon">⌕</span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Cari nomor, nama Arab, latin, atau arti..."
+                        autocomplete="off"
+                    >
+
+                    <button
+                        type="button"
+                        id="clearSearch"
+                        class="clear-search"
+                        aria-label="Hapus pencarian"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="language-box">
+
+                    <label for="languageSelect">
+                        Bahasa arti:
+                    </label>
+
+                    <select id="languageSelect">
+                        <option value="id">
+                            Indonesia
+                        </option>
+
+                        <option value="en">
+                            English
+                        </option>
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- INFORMASI JUMLAH DATA -->
+            <div class="result-info">
+                <p id="resultCount">
+                    Menampilkan 99 nama
+                </p>
+
+                <span id="apiStatus" class="api-status">
+                    Menghubungkan API...
+                </span>
+            </div>
+
+
+            <!-- LOADING -->
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+
+                <p>
+                    Sedang mengambil data Asmaul Husna...
+                </p>
+            </div>
+
+
+            <!-- PESAN ERROR -->
+            <div id="errorMessage" class="error-message" hidden>
+
+                <h3>Data gagal dimuat</h3>
+
+                <p>
+                    Periksa koneksi internet dan coba kembali.
+                </p>
+
+                <button type="button" id="retryButton">
+                    Coba Lagi
+                </button>
+
+            </div>
+
+
+            <!-- GRID KARTU -->
+            <div id="asmaContainer" class="asma-grid"></div>
+
+
+            <!-- INFORMASI SUMBER -->
+            <div class="source-info">
+                <span>✦</span>
+
+                <p>
+                    Sumber data nama dan transliterasi:
+                    AlAdhan API
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- MODAL DETAIL / SLIDE -->
+    <div
+        id="detailModal"
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="detailLatin"
+        hidden
+    >
+
+        <div class="modal-content">
+
+            <button
+                type="button"
+                id="closeModal"
+                class="close-button"
+                aria-label="Tutup detail"
+            >
+                &times;
+            </button>
+
+
+            <div class="detail-content">
+
+                <span class="detail-tag">
+                    ASMAUL HUSNA
+                </span>
+
+                <p id="detailNumber" class="detail-number">
+                    NAMA KE-01
+                </p>
+
+                <div id="detailArabic" class="detail-arabic">
+                </div>
+
+                <h2 id="detailLatin" class="detail-latin">
+                </h2>
+
+                <div class="detail-divider"></div>
+
+                <p class="meaning-label">
+                    ARTI NAMA
+                </p>
+
+                <h3 id="detailMeaning" class="detail-meaning">
+                </h3>
+
+                <p id="detailLanguage" class="detail-language">
+                    Bahasa Indonesia
+                </p>
+
+            </div>
+
+
+            <!-- NAVIGASI SLIDE -->
+            <div class="slide-navigation">
+
+                <button
+                    type="button"
+                    id="prevButton"
+                    class="slide-button"
+                >
+                    ← Sebelumnya
+                </button>
+
+                <span id="slideNumber">
+                    1 / 99
+                </span>
+
+                <button
+                    type="button"
+                    id="nextButton"
+                    class="slide-button"
+                >
+                    Selanjutnya →
+                </button>
+
+            </div>
+
+            <p class="slide-hint">
+                Gunakan tombol untuk menjelajahi 99 nama Allah.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <h3>Asmaul Husna</h3>
+
+        <p>
+            Mengenal dan mempelajari 99 nama Allah SWT.
+        </p>
+
+        <p class="footer-credit">
+            © 2026 Asmaul Husna | Powered by AlAdhan API | Kelompok 2
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>

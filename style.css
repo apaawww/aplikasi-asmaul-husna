@@ -1,0 +1,792 @@
+
+/* =================================
+   1. PENGATURAN DASAR
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f8f5;
+    color: #263d32;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* =================================
+   2. NAVBAR
+================================= */
+
+.navbar {
+    background: #164b38;
+    color: white;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.brand-icon {
+    color: #f4d88e;
+    font-size: 27px;
+}
+
+.nav-label {
+    font-size: 13px;
+    color: #dce9df;
+}
+
+
+/* =================================
+   3. HERO SECTION
+================================= */
+
+.hero {
+    background:
+        linear-gradient(
+            135deg,
+            #164b38,
+            #287452
+        );
+
+    color: white;
+    text-align: center;
+
+    padding: 65px 20px 70px;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.hero-subtitle {
+    color: #f4d88e;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+.hero-arabic {
+    font-family: 'Amiri', serif;
+    font-size: 40px;
+    color: #f4d88e;
+    margin-bottom: 15px;
+}
+
+.hero-description {
+    max-width: 540px;
+    margin: auto;
+
+    color: #e2eee5;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.total-box {
+    display: inline-block;
+
+    margin-top: 30px;
+    padding: 15px 35px;
+
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.10);
+}
+
+.total-box span {
+    font-size: 34px;
+    font-weight: 700;
+    color: #f4d88e;
+}
+
+.total-box p {
+    font-size: 12px;
+    color: #e2eee5;
+}
+
+
+/* =================================
+   4. MAIN CONTENT
+================================= */
+
+.main-container {
+    max-width: 1200px;
+    margin: 55px auto;
+    padding: 0 25px;
+}
+
+.content-section {
+    width: 100%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-tag {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #b58b3c;
+    font-weight: 600;
+}
+
+.section-heading h2 {
+    font-size: 28px;
+    color: #164b38;
+    margin: 10px 0;
+}
+
+.section-heading p {
+    font-size: 13px;
+    color: #888;
+}
+
+
+/* =================================
+   5. TOOLBAR
+================================= */
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+.search-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    background: white;
+    border: 1px solid #dce5de;
+    border-radius: 10px;
+
+    padding: 0 14px;
+    min-width: 0;
+}
+
+.search-icon {
+    font-size: 23px;
+    color: #287452;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+
+    border: none;
+    outline: none;
+
+    padding: 14px 10px;
+    font-size: 13px;
+    background: transparent;
+}
+
+.clear-search {
+    border: none;
+    background: transparent;
+
+    color: #999;
+    font-size: 22px;
+    padding: 5px;
+}
+
+.clear-search:hover {
+    color: #164b38;
+}
+
+.language-box {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    font-size: 12px;
+    color: #666;
+}
+
+.language-box select {
+    background: white;
+    border: 1px solid #dce5de;
+    border-radius: 9px;
+
+    padding: 12px;
+    outline: none;
+    color: #164b38;
+
+    font-size: 12px;
+}
+
+
+/* =================================
+   6. INFORMASI JUMLAH DATA
+================================= */
+
+.result-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+.result-info p {
+    font-size: 12px;
+    color: #777;
+}
+
+.api-status {
+    font-size: 11px;
+    color: #287452;
+    background: #e6f2e9;
+
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+
+/* =================================
+   7. LOADING
+================================= */
+
+.loading {
+    text-align: center;
+    padding: 50px 15px;
+    color: #287452;
+}
+
+.spinner {
+    width: 35px;
+    height: 35px;
+
+    border: 4px solid #dce8df;
+    border-top-color: #287452;
+
+    border-radius: 50%;
+    margin: 0 auto 15px;
+
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading p {
+    font-size: 13px;
+}
+
+
+/* =================================
+   8. ERROR MESSAGE
+================================= */
+
+.error-message {
+    text-align: center;
+    padding: 35px 15px;
+
+    background: #fff3f1;
+    border-radius: 12px;
+
+    color: #a43a2e;
+}
+
+.error-message h3 {
+    margin-bottom: 8px;
+}
+
+.error-message p {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.error-message button {
+    background: #164b38;
+    color: white;
+    border: none;
+
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+
+/* =================================
+   9. GRID ASMAUL HUSNA
+================================= */
+
+.asma-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.asma-card {
+    width: 100%;
+    min-width: 0;
+
+    background: white;
+    border: 1px solid #e4ebe5;
+    border-radius: 15px;
+
+    padding: 22px 18px;
+
+    text-align: center;
+    color: #263d32;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,0.035);
+
+    transition: 0.25s ease;
+}
+
+.asma-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #d3a94f;
+
+    box-shadow:
+        0 9px 20px rgba(22,75,56,0.10);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-number {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #eaf3ed;
+    color: #287452;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.card-symbol {
+    color: #d3a94f;
+    font-size: 18px;
+}
+
+.card-arabic {
+    font-family: 'Amiri', serif;
+
+    font-size: 37px;
+    color: #164b38;
+
+    margin: 22px 0 10px;
+    direction: rtl;
+}
+
+.card-latin {
+    color: #287452;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.card-meaning {
+    color: #888;
+    font-size: 12px;
+
+    margin-top: 9px;
+    line-height: 1.7;
+
+    min-height: 40px;
+}
+
+.card-detail {
+    display: inline-block;
+
+    margin-top: 14px;
+    padding-top: 10px;
+
+    border-top: 1px solid #edf0ed;
+
+    width: 100%;
+
+    color: #b58b3c;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+
+/* =================================
+   10. SUMBER DATA
+================================= */
+
+.source-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-top: 35px;
+
+    color: #888;
+    font-size: 11px;
+}
+
+.source-info span {
+    color: #d3a94f;
+    font-size: 17px;
+}
+
+
+/* =================================
+   11. MODAL DETAIL / SLIDE
+================================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+
+    background: rgba(10, 30, 20, 0.72);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.modal-content {
+    position: relative;
+
+    width: 100%;
+    max-width: 550px;
+
+    background: white;
+    border-radius: 20px;
+
+    padding: 35px 30px 25px;
+
+    animation: modalAppear 0.25s ease;
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+
+    background: transparent;
+    border: none;
+
+    font-size: 30px;
+    color: #888;
+}
+
+.close-button:hover {
+    color: #164b38;
+}
+
+.detail-content {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.detail-tag {
+    color: #b58b3c;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.detail-number {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #888;
+}
+
+.detail-arabic {
+    font-family: 'Amiri', serif;
+
+    font-size: 65px;
+    color: #164b38;
+
+    margin: 15px 0;
+    direction: rtl;
+}
+
+.detail-latin {
+    color: #287452;
+    font-size: 23px;
+}
+
+.detail-divider {
+    width: 65px;
+    height: 2px;
+
+    background: #d3a94f;
+
+    margin: 25px auto;
+}
+
+.meaning-label {
+    color: #999;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.detail-meaning {
+    color: #263d32;
+    font-size: 21px;
+    line-height: 1.6;
+
+    margin-top: 10px;
+}
+
+.detail-language {
+    font-size: 12px;
+    color: #999;
+    margin-top: 10px;
+}
+
+
+/* =================================
+   12. NAVIGASI SLIDE
+================================= */
+
+.slide-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    padding-top: 20px;
+    border-top: 1px solid #edf0ed;
+}
+
+.slide-button {
+    background: #164b38;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 11px 15px;
+    font-size: 12px;
+
+    transition: 0.2s;
+}
+
+.slide-button:hover:not(:disabled) {
+    background: #287452;
+}
+
+.slide-button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+#slideNumber {
+    color: #287452;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.slide-hint {
+    text-align: center;
+    font-size: 10px;
+    color: #aaa;
+    margin-top: 17px;
+}
+
+
+/* =================================
+   13. FOOTER
+================================= */
+
+.footer {
+    background: #164b38;
+    color: white;
+
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.footer h3 {
+    color: #f4d88e;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.footer p {
+    font-size: 12px;
+    color: #dce9df;
+}
+
+.footer-credit {
+    margin-top: 15px;
+    font-size: 10px !important;
+    color: #a9c0b0 !important;
+}
+
+
+/* =================================
+   14. RESPONSIVE TABLET
+================================= */
+
+@media (max-width: 850px) {
+
+    .asma-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =================================
+   15. RESPONSIVE HP
+================================= */
+
+@media (max-width: 580px) {
+
+    .nav-container {
+        padding: 16px;
+    }
+
+    .brand {
+        font-size: 17px;
+    }
+
+    .nav-label {
+        font-size: 10px;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-arabic {
+        font-size: 34px;
+    }
+
+    .main-container {
+        margin: 40px auto;
+        padding: 0 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+    .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .language-box {
+        justify-content: space-between;
+    }
+
+    .asma-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .asma-card {
+        padding: 18px;
+    }
+
+    .card-arabic {
+        font-size: 34px;
+    }
+
+    .modal-content {
+        padding: 30px 18px 20px;
+    }
+
+    .detail-arabic {
+        font-size: 53px;
+    }
+
+    .detail-latin {
+        font-size: 20px;
+    }
+
+    .detail-meaning {
+        font-size: 18px;
+    }
+
+    .slide-button {
+        padding: 10px;
+        font-size: 10px;
+    }
+
+}
